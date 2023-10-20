@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Kiya.ai - JUNE 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* CSS custom variables */
+        :root {
+            /* primary colors */
+            --hue-primary: 202;
+            --saturation-primary: 67%;
+            --lightness-primary: 52%;
+            --clr-primary: hsl(var(--hue-primary), var(--saturation-primary), var(--lightness-primary));
+            --clr-primary-light: hsl(var(--hue-primary), var(--saturation-primary), 90%);
+            /* secondary colors */
+            --hue-secondary: 96;
+            --saturation-secondary: 100%;
+            --lightness-secondary: 41%;
+            --clr-secondary: hsl(var(--hue-secondary), var(--saturation-secondary), var(--lightness-secondary));
+            --clr-secondary-light: hsl(var(--hue-secondary), var(--saturation-secondary), 70%);
+            --clr-light: hsl(0, 0%, 98%);
+            --txt-dark: hsl(0, 0%, 22%);
+            --clr-gray: hsl(180, 2%, 92%);
+            /* dark colors */
+            --hue-dark: 203;
+            --saturation-dark: 63%;
+            --lightness-dark: 17%;
+            --clr-dark: hsl(var(--hue-dark), var(--saturation-dark), var(--lightness-dark));
+            --white: #fff;
+            /* fonts */
+            --font-poppins: 'Poppins', sans-serif;
+            --font-bold: 700;
+            --font-regular: 400;
+        }
+        /* universal classes */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        /* HTML element classes */
+        html {
+            font-size: 15px;
+        }
+        body {
+            /* font-family: 'Helvetica', 'Arial', sans-serif; */
+            font-family: var(--font-poppins);
+            background-color: var(--clr-gray);
+        }
+        p {
+            font-size: 0.9rem;
+            /* line-height: 1.2; */
+            /* text-align: justify; */
+            /* letter-spacing: 1px; */
+            /* hyphens: auto; */
+        }
+        strong {
+            font-weight: 600;
+        }
+        h1,
+        h4 {
+            line-height: 1.4;
+            font-weight: 600;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+        }
+        header {
+            align-items: start;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        main {
+            display: grid;
+            place-items: center;
+        }
+        /* utility classes */
+        .d-block {
+            display: block;
+        }
+        .my-0 {
+            margin-block: 0;
+        }
+        .my-05 {
+            margin-block: 05rem;
+        }
+        .mt-1 {
+            margin-top: 1rem;
+        }
+        .mt-2 {
+            margin-top: 2rem;
+        }
+        .my-1 {
+            margin-block: 1rem;
+        }
+        .my-2 {
+            margin-block: 2rem;
+        }
+        .mt-1 {
+            margin-top: 1rem;
+        }
+        .mt-2 {
+            margin-top: 2rem;
+        }
+        .mt-3 {
+            margin-top: 3rem;
+        }
+        .mb-05 {
+            margin-bottom: 0.5rem;
+        }
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+        .my-1 {
+            margin-block: 1rem
+        }
+        .p-1 {
+            padding: 1rem;
+        }
+        .pl-0 {
+            padding-left: 0;
+        }
+        .px-2 {
+            padding-inline: 2rem;
+        }
+        .px-margin {
+            padding-inline: 3rem;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .flex-column {
+            flex-direction: column;
+        }
+        .gap-5percent {
+            gap: 5%;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .btn {
+            padding: 0.25em 0.75em;
+        }
+        .btn-white {
+            background-color: var(--clr-light);
+            color: var(--clr-primary);
+        }
+        .btn-primary {
+            background-color: var(--clr-primary);
+            color: var(--clr-light);
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .align-self--start {
+            align-self: start;
+        }
+        .position-relative {
+            position: relative;
+        }
+        .position-absolute {
+            position: absolute;
+        }
+        .list-unstyled {
+            list-style: none;
+        }
+        .w-fitContent {
+            width: fit-content;
+        }
+        .text-light {
+            color: var(--clr-light);
+        }
+        /* custom classes */
+        .wrapper {
+            width: 680px;
+            /* height: 100vh; */
+            /* background-color: var(--clr-gray); */
+            padding-top: 3rem;
+            position: relative;
+            margin-block: 0.5rem;
+            box-shadow: 0 0 4px 2px hsl(203deg 63% 17% / 20%);
+            background: var(--clr-gray) url(https://i.ibb.co/KwGQ3b1/curves-bg-full.png) no-repeat center /cover;
+            /* background-blend-mode:; */
+        }
+        .header_info--tile {
+            color: var(--clr-primary);
+            font-weight: var(--font-regular);
+            margin-bottom: 0.5rem;
+        }
+        .header_info--bgblue {
+            background-color: var(--clr-primary);
+            font-size: 1.7rem;
+            padding: 0.4rem 3rem 0.4rem 1rem;
+            /* text-transform: uppercase; */
+            color: var(--clr-light);
+            font-weight: normal;
+            position: absolute;
+            right: 0;
+        }
+        .section-divider {
+            /* background-color: blue; */
+            /* height: 10px; */
+            margin-bottom: 1.5rem;
+            color: var(--clr-primary);
+            font-weight: 900;
+            padding-left: 3rem;
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                background-color: var(--clr-primary);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before {
+                height: 20px;
+                width: 2rem;
+                left: 0;
+            }
+            &::after {
+                right: 0;
+                height: 2.5px;
+                width: 55%;
+            }
+        }
+        .banner {
+            /* background: url(assets/images/curves-bg.png) no-repeat center /cover; */
+            .img {
+                width: 87%;
+                margin-left: auto;
+                display: block;
+            }
+        }
+        .article-one {
+            width: 47.8%;
+            aspect-ratio: 1;
+            background-color: var(--clr-primary);
+            padding: 1.5rem 3rem;
+            color: var(--clr-light);
+            left: 0;
+            top: 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section.two {
+            margin-top: 24%;
+            /* gap: 5%; */
+        }
+        .article-two {
+            /* gap: 5%; */
+            /* align-items: end; */
+            margin-top: -4.4rem;
+            color: var(--clr-dark);
+            flex: 0 0 47.5%;
+        }
+        .article-three {
+            background-color: var(--clr-primary);
+            color: var(--white);
+            flex: 0 0 47.5%;
+            margin-top: -24%;
+            /* padding: 2rem; */
+            /* bottom: 0; */
+            /* top: 34%; */
+        }
+        section.three {
+            .img-section {
+                flex: 0 0 64%;
+                /* border: 1px solid; */
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                /* Two columns */
+                grid-template-rows: repeat(2, 1fr);
+                /* Two rows */
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 34%;
+                    display: inline-block;
+                    background: url(https://i.ibb.co/g4XtYvQ/right-triangle-kiya.png) no-repeat;
+                    aspect-ratio: 1;
+                    width: 45px;
+                    background-size: 100%;
+                }
+                .img {
+                    padding: 5px;
+                    background-color: var(--clr-gray);
+                    &.one {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &.two {
+                        grid-row: 1;
+                        /* Position in the first row (top) */
+                        grid-column: 2;
+                        /* Position in the second column (right) */
+                        align-self: start;
+                        /* Align to the start of the grid cell (top) */
+                        justify-self: end;
+                        /* Align to the end of the grid cell (right) */
+                        /* Adjust the percentages as needed */
+                        transform: translate(-50%, 50%);
+                        /* To fine-tune the positioning */
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .article-four {
+                /* flex: 0 0 50%;  */
+                position: absolute;
+                width: 41%;
+                left: 52%;
+                right: 0;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                height: 67%;
+                width: 33%;
+                background-color: var(--clr-primary);
+                left: 0;
+                /* top: 29%; */
+                bottom: 17%;
+            }
+        }
+        section.four {
+            .img {
+                flex: 0 0 30.5%;
+            }
+            .article-five {
+                flex: 0 1 64.5%;
+            }
+        }
+        hr {
+            background-color: var(--clr-primary);
+            height: 1.5px;
+            border: 0;
+            margin-top: 2rem;
+        }
+        /* page 2 */
+        .page__two {
+            gap: 5%;
+        }
+        .col-left {
+            flex: 0 0 45%;
+        }
+        section.seven {
+            .article-seven {
+                flex: 0 0 47.5%;
+            }
+            .article-eight {
+                flex: 0 0 47.5%;
+                background-color: var(--clr-primary);
+                color: var(--clr-light);
+                .img {
+                    width: 100%;
+                }
+            }
+        }
+        .col-left--header img {
+            width: 100%;
+            display: block;
+        }
+        .article-eight h1,
+        .article-eight li {
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .article-eight li {
+            padding-left: 1rem;
+            border-left: 3px solid var(--clr-light);
+        }
+        section.eight {
+            /* outline: 1px solid red; */
+            &::before {
+                content: '';
+                position: absolute;
+                top: 28%;
+                left: 0;
+                background-color: var(--clr-primary);
+                width: 40%;
+                height: 53%;
+                display: block;
+            }
+            .img-wrapper {
+                flex: 0 0 47.5%;
+                align-items: end;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 38%;
+                    right: 0;
+                    display: inline-block;
+                    background: url(https://i.ibb.co/YXFb9cf/bank-of-jordan-advertising-image.png) no-repeat;
+                    aspect-ratio: 2/1;
+                    width: 33%;
+                    background-size: 100%;
+                }
+            }
+            .article-nine {
+                flex: 0 0 47.5%;
+            }
+        }
+        section.ten {
+            .img {
+                flex: 0 0 47.5%;
+            }
+            .article-eleven {
+                flex: 0 0 47.5%;
+                .p {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        .icon {
+            /* flex: 0 1 10%; */
+            width: 20px !important;
+            /* opacity: 0.7; */
+        }
+        footer {
+            background-color: var(--clr-primary);
+            width: 100%;
+            color: var(--clr-light);
+            justify-content: end;
+            gap: 1rem;
+            height: 6vh;
+            .p {
+                gap: 0.5rem;
+                /* outline: 1px solid red; */
+            }
+            .a {
+                /* margin-left: 1rem; */
+            }
+            .social {
+                /* outline: 1px solid yellow; */
+                gap: 0.5rem;
+                .icon {
+                    border: 1px solid var(--white);
+                    border-radius: 5px;
+                    padding: 2px;
+                    &.insta {
+                        border: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <header class="d-flex px-margin">
+                <!-- <a href="https://www.kiya.ai/" target="_blank" rel="noopener noreferrer"> -->
+                <img class="logo" src="https://i.ibb.co/6WDRCbd/kiya-logo-with-tagline.png"
+                    alt="kiya-logo-with-tagline">
+                <!-- </a> -->
+                <div class="header_info">
+                    <h2 class="header_info--bgblue text-right">Newsletter</h2>
+                </div>
+            </header>
+            <section class="section-divider position-relative">
+                <h1>EVENT HIGHLIGHTS</h1>
+            </section>
+            <section class="banner">
+                <img src="https://i.ibb.co/xsKr1PF/Rajesh-Mirjankar-interview.jpg" alt="Rajesh-Mirjankar-interview">
+            </section>
+            <article class="article-one d-flex position-absolute">
+                <h4 class="mb-1">Bharatmeta Gets the Spotlight at Vivatech, Paris</h4>
+                <p class="mb-1 ">Rajesh Mirjankar, CEO & MD, Kiya.ai was invited by the Ministry of
+                    Electronics and Information Technology (MEITY) as a part of the official Indian delegation to be the
+                    keynote speaker at Europe's biggest startup and technology event, VivaTech 2023, in Paris, where he
+                    spoke extensively on 'Bharatmeta: Commerce & Culture in Metaverse' and discussed the rise of Indian
+                    tech startups in the domain of the Metaverse.</p>
+                <a href="https://www.aninews.in/news/business/business/bharatmeta-indian-metaverse-platform-showcased-at-vivatech-paris20230616132615/"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-white align-self--start">Read more</a>
+            </article>
+            <section class="two d-flex px-margin gap-5percent">
+                <article class="article-two">
+                    <img src="https://i.ibb.co/9NVQ3w3/Group-photo.jpg" alt="Group-photo">
+                    <div class="">
+                        <h4 class="my-1">Rajesh Mirjankar Attends G20 Digital
+                            Innovation Alliance (G20-DIA)
+                            Roadshow in Dubai as a Panelist</h4>
+                        <p class="mb-1">Rajesh Mirjankar, MD & CEO of Kiya.ai, was invited to
+                            the G20 Digital Innovation Alliance Roadshow in
+                            Dubai, where he shared valuable insights on future
+                            trends, highlighted the significance of autonomous
+                            mobility programs, and showcased the limitless
+                            potential of digital innovation.</p>
+                        <a href="https://newsonair.com/2023/05/30/g20-digital-innovation-alliance-roadshow-in-dubai-highlights-importance-of-digital-public-goods-and-startups-in-the-global-economy/"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary align-self--start">Read
+                            more</a>
+                    </div>
+                </article>
+                <article class="article-three">
+                    <a href="https://www.digitalisleofman.com/fintechchallenge/" target="_blank"
+                        rel="noopener noreferrer">
+                    </a>
+                    <div class="px-2">
+                        <h4 class="my-1">
+                            Kiya.ai participates in the FinTech
+                            Innovation Challenge Finale
+                        </h4>
+                        <p class="">
+                            Kiya.ai participated in the FinTech Innovation
+                            Challenge Finale, where team Kiya.ai
+                            addressed Challenge Statement #1: Digital
+                            Identity Management & E-KYC to support the
+                            growth & application of FinTech across the
+                            Isle of Man.
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <section class="three d-flex align-items-center px-margin mb-2 mt-3 position-relative">
+                <div class="img-section position-relative">
+                    <img class="img one" src="https://i.ibb.co/wwmRFvp/img-section-1.jpg" alt="img-section-1">
+                    <img class="img two" src="https://i.ibb.co/d5XLzj8/img-section-2.jpg" alt="img-section-2">
+                </div>
+                <article class="article-four">
+                    <h4 class="mb-1">Rajesh Mirjankar Presents
+                        Bharatmeta at G20 Digital
+                        Innovation Alliance (G20-DIA)
+                        Mega Summit, Bengaluru</h4>
+                    <p class="mb-1">Rajesh Mirjankar, MD & CEO of Kiya.ai, was invited
+                        to the G20 DIA Mega Summit, India, where he
+                        presented <strong>
+                            Bharatmeta - India’s first-ever
+                            indigenous Metaverse
+                        </strong> and was a part of the
+                        insightful panel discussion on <strong>
+                            'Banking
+                            Innovation and Regulation in India'
+                        </strong> along with
+                        other industry luminaries and experts.</p>
+                </article>
+            </section>
+            <section class="four px-margin my-1">
+                <h4 class="mb-1">Kiya.ai Collaborates with Cedar-IBSi NextGen Core Banking Summit as its Exclusive
+                    Metaverse Partner</h4>
+                <div class="d-flex gap-5percent">
+                    <figure class="img">
+                        <img src="https://i.ibb.co/XCmjPt3/article-5-img.jpg" alt="article-5-img">
+                    </figure>
+                    <article class="article-five">
+                        <p class="">
+                            Kiya.ai became the official event and Metaverse Partner for UK’s
+                            prominent banking summit, Cedar-IBSi Nextgen Core Banking
+                            Summit, London. Oswald Lopes, Chief Technology Officer, Kiya.ai, was
+                            invited to be the keynote speaker, where he shared some
+                            thought-provoking insights and discussed the future of digital core
+                            banking and how it can help financial enterprises to keep up with the
+                            ever-evolving industry landscape
+                        </p>
+                    </article>
+                </div>
+                <hr>
+            </section>
+            <section class="five px-margin my-1">
+                <img src="https://i.ibb.co/fMsSVYh/Team-Kiya-GFF2023.jpg" alt="Team-Kiya-GFF2023">
+                <h4 class="mt-2 mb-1">Kiya.ai Returns to Global Fintech Festival 2023</h4>
+                <article class="article-six">
+                    <p class="">
+                        Kiya.ai participated in Global Fintech Fest 2023, where we unveiled our ground-breaking
+                        solutions, built valuable connections and discussed the future of digital banking & financial
+                        services. GFF2023 was nothing short of an overwhelming confluence of ideas and innovations!
+                    </p>
+                    <span class="mt-1 d-block">To get a glimpse - <a href="https://www.youtube.com/watch?v=Pofnj3eDKXc"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a></span>
+                </article>
+            </section>
+            <section class="section-divider position-relative">
+                <h1>IN THE NEWS</h1>
+            </section>
+            <section class="seven d-flex px-margin gap-5percent my-1">
+                <article class="article-seven">
+                    <h4 class="mb-1">
+                        Kiya.ai Ties Up with Punjab National Bank to Build a Virtual Branch in Metaverse
+                    </h4>
+                    <a href="https://pnbmetaverse.pnbindia.in/pnb/" target="_blank" rel="noreferrer noopener">
+                        <img src="https://i.ibb.co/Lg52S9n/pnb.jpg" alt="pnb">
+                    </a>
+                    <p class="my-1">
+                        Kiya.ai successfully develops <strong>
+                            Punjab National
+                            Bank’s (PNB) exclusive virtual bank
+                        </strong> on Bharatmeta
+                        - India’s First Business Metaverse Solution. This new
+                        virtual branch will deliver an immersive banking
+                        experience to PNB’s customers, allowing them to
+                        access the bank’s lounge and receive verified
+                        information on Bank’s Deposits, Loans, Govt. Welfare
+                        Schemes, Digital initiatives, etc.
+                    </p>
+                    <a href="https://timesofindia.indiatimes.com/business/india-business/pnb-launches-metaverse-branch/articleshow/101547990.cms?from=mdr"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read more</a>
+                </article>
+                <article class="article-eight">
+                    <a href="https://www.kiya.ai/2023/07/11/ibs-intelligence-recognises-kiya-ai-as-the-1-best-selling-financial-technology-provider-in-five-categories/"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="img" src="https://i.ibb.co/P4yDhTn/IBIS-RANKING.jpg" alt="IBIS-RANKING">
+                    </a>
+                    <!-- <hr> -->
+                    <div class="p-1">
+                        <h1>IBS Intelligence recognises Kiya.ai as the #1 best-selling financial technology provider in
+                            five categories</h1>
+                        <ul class="list-unstyled pl-0">
+                            <li>
+                                Ranked #1 Global
+                                Compliance
+                                Management -
+                                Kiya.ai Universal
+                                Regtech Solution
+                            </li>
+                            <li>
+                                Ranked #1 Global
+                                Card Management
+                                - Kiya.ai Omnichannel
+                                and Open Finance
+                                Platform
+                            </li>
+                            <li>
+                                Ranked #1 Regional
+                                Leader | APAC
+                            </li>
+                            <li>
+                                Ranked #1 India
+                                Domestic SLT | Leader
+                            </li>
+                            <li>
+                                Ranked #1 India
+                                Domestic SLT Special
+                                Award - Robotic
+                                Process Automation
+                            </li>
+                        </ul>
+                        <a href="https://www.kiya.ai/2023/07/11/ibs-intelligence-recognises-kiya-ai-as-the-1-best-selling-financial-technology-provider-in-five-categories/"
+                            target="_blank" rel="noreferrer noopener" class="btn btn-white">Read more</a>
+                    </div>
+                </article>
+            </section>
+            <section class="eight d-flex px-margin my-1 position-relative gap-5percent">
+                <figure class="img-wrapper position-relative d-flex">
+                    <a href="https://www.kiya.ai/2023/05/15/kiya-ai-expands-its-footprint-in-middle-east-region-enables-jordan-ahli-bank-with-its-loan-origination-system-and-crm-solutions/"
+                        target="_blank" rel="noreferrer noopener">
+                        <img class="img" src="https://i.ibb.co/2KjFYNF/ahil-picture.jpg" alt="ahil-picture">
+                    </a>
+                </figure>
+                <article class="article-nine">
+                    <h4 class="mb-1">Kiya.ai Expands Footprint in Middle East Region, Enables Jordan Ahli Bank with its
+                        Loan Origination System and CRM Solutions</h4>
+                    <p class="my-1">
+                        Kiya.ai expands its presence in the Middle East region by enabling Jordan Ahli Bank, one of the
+                        leading banking institutions in the Kingdom, with its Loan Origination System (LOS) and
+                        dedicated add-on Customer Relationship Management (CRM) solution for wholesale banking
+                        customers.
+                    </p>
+                    <a href="https://www.kiya.ai/2023/05/15/kiya-ai-expands-its-footprint-in-middle-east-region-enables-jordan-ahli-bank-with-its-loan-origination-system-and-crm-solutions/"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read more</a>
+                </article>
+            </section>
+            <section class="section-divider position-relative">
+                <h1>PRODUCT UPDATES</h1>
+            </section>
+            <section class="nine px-margin my-1">
+                <article class="article-ten">
+                    <h3 class="mb-1 btn btn-primary w-fitContent">GST Automation Module
+                    </h3>
+                    <p class="mt-1 mb-2">
+                        Kiya.ai’s GST Automation Module manages the GST, invoicing & accounting as per the new tax
+                        regime. The
+                        solution is built on modular principles and has the flexibility to be tailored to
+                        region-specific needs of the
+                        organisation. It provides substantial flexibility in terms of defining hierarchy and parameters
+                        can be set to
+                        accommodate the business flow of the institution.
+                    </p>
+                    <h3 class="mb-1 btn btn-primary w-fitContent">Finnet 2.0
+                    </h3>
+                    <p class="mt-1 mb-2">
+                        Finnet 2.0, developed by Kiya.ai, provides standardised reports that enable financial
+                        institutions to meet
+                        regulatory requirements efficiently. The standardised format ensures consistency and simplifies
+                        reporting,
+                        saves time and resources for financial institutions.
+                    </p>
+                    <h3 class="mb-1 btn btn-primary w-fitContent"> FATCA
+                    </h3>
+                    <p class="mt-1 mb-2">
+                        Kiya.ai, has recently led to the development of tailored FATCA reports for India, China,
+                        Belgium, Samoa, and
+                        Ghana. By providing comprehensive and accurate reports, Kiya.ai supports financial institutions
+                        in meeting
+                        their reporting obligations and staying compliant with the respective tax authorities'
+                        guidelines.
+                    </p>
+                    <h3 class="mb-1 btn btn-primary w-fitContent">AML in Exchange House
+                    </h3>
+                    <p class="mt-1 mb-2">
+                        Kiya.ai’s Anti-Money Laundering (AML) Solution for exchange houses proactively helps financial
+                        institutions
+                        to identify and report suspicious activities, minimising the risk of financial crimes. The AML
+                        solution fortifies
+                        the compliance procedures, offering configurable risk parameters and rules that align with our
+                        specific
+                        requirements.
+                    </p>
+                </article>
+            </section>
+            <section class="section-divider position-relative">
+                <h1>LATEST READ</h1>
+            </section>
+            <section class="ten d-flex px-margin gap-5percent my-1 align-items-center">
+                <figure class="img">
+                    <a href="https://www.kiya.ai/2023/10/05/bharatmeta-taking-india-forward-as-the-leading-force-in-the-area-of-metaverse/"
+                        target="_blank" rel="noreferrer noopener">
+                        <img src="https://i.ibb.co/YkWKgm4/Bharatmeta.png" alt="Bharatmeta">
+                    </a>
+                </figure>
+                <article class="article-eleven">
+                    <h4 class="mb-05">Bharatmeta: Taking India Forward as the
+                        Leading Force in the Area of Metaverse</h4>
+                    <p class="p">
+                        Discover India's first-ever Business Metaverse Solution
+                        - Kiya.ai's Bharatmeta!</p>
+                    <p class="p">Built on the cutting-edge Kiyaverse Platform,
+                        Bharatmeta celebrates India's local ethos and digital
+                        prowess. It is designed to seamlessly integrate with
+                        India's rich tapestry of languages, cultures, and digital
+                        infrastructure.</p>
+                    <p class="p">Read our latest blog to dive deeper into the world of
+                        Bharatmeta and explore its boundless possibilities
+                    </p>
+                    <a href="https://www.kiya.ai/2023/10/05/bharatmeta-taking-india-forward-as-the-leading-force-in-the-area-of-metaverse/"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a>
+                </article>
+            </section>
+            <footer class="d-flex px-margin align-items-center">
+                <p class="p d-flex align-items-center">Visit
+                    <img class="icon" src="https://i.ibb.co/JqMf6fF/website.png" alt="website">
+                    <a class="a text-light" href="https://www.kiya.ai/" target="_blank"
+                        rel="noopener noreferrer">www.kiya.ai</a>
+                </p>
+                <span>|</span>
+                <p class="social d-flex align-items-center">
+                    <span class="d-block">Follow us</span>
+                    <a class="a" href="https://www.linkedin.com/company/kiya-ai/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="icon" src="https://i.ibb.co/6wQNsKQ/linkedin.png" alt="linkedin">
+                    </a>
+                    <a class="a" href="https://twitter.com/DigitalkiyaAi" target="_blank" rel="noopener noreferrer">
+                        <img class="icon" src="https://i.ibb.co/T81R3hP/twitter.png" alt="twitter">
+                    </a>
+                    <a class="a" href="https://www.facebook.com/digitalkiyaai" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="icon" src="https://i.ibb.co/FYGm3rs/facebook.png" alt="facebook">
+                    </a>
+                    <a class="a" href="https://www.instagram.com/digitalkiya.ai/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img class="icon insta" src="https://i.ibb.co/RY9PZZQ/instagram.png" alt="instagram">
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
